@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p >javaScript ko webpages me jaan dalne ke liye use 
+        karte h </p>
+    <script>
+//          "use strict"   ==> this strict keyword use when we want strictness in javascript
+        document.write("hello world");
+        let a =5;
+        var b =6;
+        document.write("there are a difference b/w let and var when we use var that can be intialize same variable agin and not giving error even let is a local variable but the var is a globle  variable ")
+        let obj= {
+            name:"Jayshikha",
+            age:22
+        }
+    document.write(obj.name)
+    document.addEventListener("click",function click(){
+        document.write("\nHello");
+    })
+  /* alert("You have just clicked")
+     //let conf = confirm("Are you sure");
+    //if(conf){
+    //    document.write("\nYou are entered");
+ //   }
+   // else{
+     //   document.write("\nYou didn't clicked on okay")
+   }*/ 
+
+    let arr = [12,23,43,45,66,77,88];
+    /* arr.forEach(element=>{
+        document.write(element)
+    }); */
+    function filterEven(number){
+        return number%2==0;
+    }
+    let even = arr.filter(filterEven);
+    document.write(even);
+    // fectorial of a given number 
+
+    let fectorial = (number)=>{
+        if(number==0 || number ==1){
+            return 1;
+        }
+        return number*fectorial(number-1);
+    }
+    document.write(fectorial(5));
+
+    // prime number
+    let prime = (num)=>{
+        for(let i=2;i<Math.sqrt(num);i++){
+            if(num%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+  
+    document.write(  "  "+arr.filter(prime))
+    // largest elemnt of a nest3ed array
+    let arr1 = [[1,2,3],[4,5,6],[7,8,9]];
+    let largest = (arr1)=>{
+        let max = arr1[0][0];
+        for(let large of arr1){
+            for(let num of large){
+                if(num>max){
+                    max = num;
+                }
+            }
+        }
+        return max;
+    }
+    document.write("<br><br>"+largest(arr1));
+    </script>
+<!-- // kuch error aye bta dena -->
+</body>
+</html>
